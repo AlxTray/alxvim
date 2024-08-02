@@ -1,0 +1,7 @@
+{
+	plugins = {
+		oil = {
+			enable = true;
+		};
+	};
+}
