@@ -3,7 +3,7 @@
 		lsp = {
 			enable = true;
 			servers = {
-				java-language-server = {
+				kotlin-language-server = {
 					enable = true;
 				};
 				jsonls = {
@@ -33,6 +33,10 @@
 					enable = true;
 				};
 			};
+		};
+		nvim-jdtls = {
+			enable = true;
+			data = "$HOME/.cache/jdtls/workspace";
 		};
 		lsp-lines = {
 			enable = true;
