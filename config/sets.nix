@@ -1,7 +1,8 @@
 {
 	opts = {
+		showmode = false;
+
 		number = true;
-		relativenumber = true;
 
 		hlsearch = true;
 		incsearch = true;

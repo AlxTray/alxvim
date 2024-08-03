@@ -1,7 +1,0 @@
-{
-	plugins = {
-		gitsigns ={
-			enable = true;
-		};
-	};
-}

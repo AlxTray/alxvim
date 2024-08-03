@@ -107,7 +107,7 @@
 			}
 			{
 				type = "text";
-				val = "Made with <3 by Ronnie Hounskul";
+				val = "Beep beep I'm a sheep, I said beep beep I'm a sheep";
 				opts = {
 					position = "center";
 					hl = "keyword";

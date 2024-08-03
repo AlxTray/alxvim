@@ -3,29 +3,32 @@
 		lsp = {
 			enable = true;
 			servers = {
-				# Rust
+				java-language-server = {
+					enable = true;
+				};
+				jsonls = {
+					enable = true;
+				};
 				rust-analyzer = {
 					enable = true;
 					installRustc = true;
 					installCargo = true;
 				};
-				# Markdown
 				marksman = {
 					enable = true;
 				};
-				# Nix
 				nil-ls = {
 					enable = true;
 				};
-				# CSS
+				tsserver = {
+					enable = true;
+				};
 				cssls = {
 					enable = true;
 				};
-				# HTML
 				html = {
 					enable = true;
 				};
-				# C / C++
 				clangd = {
 					enable = true;
 				};
