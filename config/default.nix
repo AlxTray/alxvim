@@ -36,7 +36,6 @@
     ./plug/ui/indent-blankline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
-    ./plug/ui/precognition.nix
     ./plug/ui/telescope.nix
     ./plug/ui/neo-tree.nix
 
@@ -51,6 +50,5 @@
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/yaml-companion.nix
-    ./plug/utils/lazy.nix
   ];
 }
