@@ -46,5 +46,6 @@
     ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
+    ./plug/utils/intellitab.nix
   ];
 }
