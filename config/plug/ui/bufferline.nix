@@ -1,9 +1,7 @@
 {
-  plugins = {
-    bufferline = {
-      enable = true;
-      separatorStyle = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
-    };
+  plugins.bufferline = {
+    enable = true;
+    separatorStyle = "thin";
   };
   keymaps = [
     {

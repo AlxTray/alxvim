@@ -1,11 +1,9 @@
 {
   plugins.lspsaga = {
     enable = true;
-    beacon = {
-      enable = true;
-    };
+    beacon.enable = true;
     ui = {
-      border = "rounded"; # One of none, single, double, rounded, solid, shadow
+      border = "rounded";
       codeAction = "";
     };
     hover = {
@@ -17,11 +15,9 @@
       diagnosticOnlyCurrent = false;
       showCodeAction = true;
     };
-    symbolInWinbar = {
-      enable = true; # Breadcrumbs
-    };
+    symbolInWinbar.enable = true;
     codeAction = {
-      extendGitSigns = false;
+      extendGitSigns = true;
       showServerName = true;
       onlyInCursor = true;
       numShortcut = true;
@@ -34,13 +30,11 @@
       };
     };
     lightbulb = {
-      enable = false;
-      sign = false;
+      enable = true;
+      sign = true;
       virtualText = true;
     };
-    implement = {
-      enable = false;
-    };
+    implement.enable = true;
     rename = {
       autoSave = false;
       keys = {
@@ -56,8 +50,8 @@
       autoClose = true;
       autoPreview = true;
       closeAfterJump = true;
-      layout = "normal"; # normal or float
-      winPosition = "right"; # left or right
+      layout = "normal";
+      winPosition = "right";
       keys = {
         jump = "e";
         quit = "q";

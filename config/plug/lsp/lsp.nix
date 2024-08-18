@@ -1,41 +1,23 @@
 {
   plugins = {
-    lsp-format = {
-      enable = true;
-    };
+    lsp-format.enable = true;
     lsp = {
       enable = true;
       servers = {
-        eslint = {
-          enable = true;
-        };
-        html = {
-          enable = true;
-        };
-        lua-ls = {
-          enable = true;
-        };
-        nil-ls = {
-          enable = true;
-        };
-        marksman = {
-          enable = true;
-        };
-        pyright = {
-          enable = true;
-        };
-        gopls = {
-          enable = true;
-        };
-        terraformls = {
-          enable = true;
-        };
-        tsserver = {
-          enable = false;
-        };
-        yamlls = {
-          enable = true;
-        };
+        eslint.enable = true;
+        html.enable = true;
+        cssls.enable = true;
+        csharp-ls.enable = true;
+        lua-ls.enable = true;
+        nil-ls.enable = true;
+        marksman.enable = true;
+        bashls.enable = true;
+        clangd.enable = true;
+        pyright.enable = true;
+        gopls.enable = true;
+        tsserver.enable = true;
+        yamlls.enable = true;
+        jsonls.enable = true;
       };
       keymaps = {
         silent = true;

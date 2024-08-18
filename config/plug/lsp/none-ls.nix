@@ -2,9 +2,7 @@
   plugins.none-ls = {
     enable = true;
     enableLspFormat = true;
-    settings = {
-      updateInInsert = false;
-    };
+    settings.border = "rounded";
     sources = {
       code_actions = {
         gitsigns.enable = true;
