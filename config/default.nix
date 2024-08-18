@@ -20,6 +20,7 @@
     ./plug/lsp/none-ls.nix
     ./plug/lsp/trouble.nix
     ./plug/lsp/nvim-jdtls.nix
+    ./plug/lsp/refactoring.nix
 
     ./plug/snippets/luasnip.nix
 
