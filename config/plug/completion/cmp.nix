@@ -45,10 +45,10 @@
 
         window = {
           completion = {
-            border = "solid";
+            border = "rounded";
           };
           documentation = {
-            border = "solid";
+            border = "rounded";
           };
         };
 
