@@ -7,7 +7,7 @@
         eslint.enable = true;
         html.enable = true;
         cssls.enable = true;
-        csharp-ls.enable = true;
+        omnisharp.enable = true;
         lua-ls.enable = true;
         nil-ls.enable = true;
         marksman.enable = true;
