@@ -22,7 +22,6 @@
           { name = "nvim_lsp"; }
           { name = "cmp_git"; }
           { name = "cmdline"; }
-          { name = "emoji"; }
           {
             name = "buffer";
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
@@ -61,7 +60,6 @@
     cmp-path.enable = true;
     cmp_luasnip.enable = true;
     cmp-cmdline.enable = true;
-    cmp-emoji.enable = true;
     cmp-git.enable = true;
   };
   extraConfigLua = ''
