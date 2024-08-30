@@ -16,8 +16,6 @@
         pyright.enable = true;
         gopls.enable = true;
         tsserver.enable = true;
-        yamlls.enable = true;
-        jsonls.enable = true;
       };
       keymaps = {
         silent = true;

@@ -7,13 +7,24 @@
       code_actions = {
         gitsigns.enable = true;
         statix.enable = true;
+        proselint.enable = true;
       };
       diagnostics = {
+        checkstyle.enable = true;
+        clazy.enable = true;
+        codespell.enable = true;
+        commitlint.enable = true;
+        cppcheck.enable = true;
+        ktlint.enable = true;
+        markdownlint.enable = true;
+        proselint.enable = true;
+        pylint.enable = true;
         statix.enable = true;
-        yamllint.enable = true;
+        stylelint.enable = true;
+        tidy.enable = true;
       };
       formatting = {
-        nixpkgs_fmt.enable = true;
+        alejandra.enable = true;
         black = {
           enable = true;
           settings = ''
@@ -32,10 +43,14 @@
           '';
         };
         stylua.enable = true;
-        yamlfmt.enable = true;
+        google_java_format.enable = true;
+        ktlint.enable = true;
+        shfmt.enable = true;
+        uncrustify.enable = true;
       };
     };
   };
+
   keymaps = [
     {
       mode = [

@@ -7,7 +7,7 @@
       codeAction = "";
     };
     hover = {
-      openCmd = "!firefox"; # Choose your browser
+      openCmd = "!firefox";
       openLink = "gx";
     };
     diagnostic = {

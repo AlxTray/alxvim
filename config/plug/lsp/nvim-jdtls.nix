@@ -5,11 +5,9 @@
     enable = true;
     cmd = [ "${pkgs.jdt-language-server}/bin/jdtls" ];
     data = "~/.cache/jdtls/workspaces";
-    settings = {
-      java = {
-        signatureHelp = true;
-        completion = true;
-      };
+    settings.java = {
+      signatureHelp = true;
+      completion = true;
     };
   };
 }
