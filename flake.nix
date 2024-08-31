@@ -1,5 +1,5 @@
 {
-  description = "Elyth's NeoVim configuration";
+  description = "Alex's Nixvim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -15,12 +15,11 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      nixvim,
-      flake-parts,
-      pre-commit-hooks,
-      ...
+    { nixpkgs
+    , nixvim
+    , flake-parts
+    , pre-commit-hooks
+    , ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
@@ -31,12 +30,11 @@
       ];
 
       perSystem =
-        {
-          system,
-          pkgs,
-          self',
-          lib,
-          ...
+        { system
+        , pkgs
+        , self'
+        , lib
+        , ...
         }:
         let
           nixvim' = nixvim.legacyPackages.${system};

@@ -4,48 +4,48 @@
     ./keys.nix
     ./sets.nix
 
-    ./plug/colorscheme/colorscheme.nix
+    ./plugins/colorscheme/colorscheme.nix
 
-    ./plug/completion/cmp.nix
-    ./plug/completion/lspkind.nix
+    ./plugins/completion/cmp.nix
+    ./plugins/completion/lspkind.nix
 
-    ./plug/git/gitsigns.nix
-    ./plug/git/lazygit.nix
-    ./plug/git/worktree.nix
+    ./plugins/git/gitsigns.nix
+    ./plugins/git/lazygit.nix
+    ./plugins/git/worktree.nix
 
-    ./plug/lsp/fidget.nix
-    ./plug/lsp/lsp.nix
-    ./plug/lsp/lspsaga.nix
-    ./plug/lsp/none-ls.nix
-    ./plug/lsp/trouble.nix
-    ./plug/lsp/nvim-jdtls.nix
-    ./plug/lsp/refactoring.nix
+    ./plugins/lsp/fidget.nix
+    ./plugins/lsp/lsp.nix
+    ./plugins/lsp/lspsaga.nix
+    ./plugins/lsp/none-ls.nix
+    ./plugins/lsp/trouble.nix
+    ./plugins/lsp/nvim-jdtls.nix
+    ./plugins/lsp/refactoring.nix
 
-    ./plug/snippets/luasnip.nix
+    ./plugins/snippets/luasnip.nix
 
-    ./plug/statusline/lualine.nix
+    ./plugins/statusline/lualine.nix
 
-    ./plug/treesitter/treesitter-textobjects.nix
-    ./plug/treesitter/treesitter.nix
+    ./plugins/treesitter/treesitter-textobjects.nix
+    ./plugins/treesitter/treesitter.nix
 
-    ./plug/ui/alpha.nix
-    ./plug/ui/bufferline.nix
-    ./plug/ui/indent-blankline.nix
-    ./plug/ui/noice.nix
-    ./plug/ui/nvim-notify.nix
-    ./plug/ui/telescope.nix
-    ./plug/ui/neo-tree.nix
+    ./plugins/ui/alpha.nix
+    ./plugins/ui/bufferline.nix
+    ./plugins/ui/indent-blankline.nix
+    ./plugins/ui/noice.nix
+    ./plugins/ui/nvim-notify.nix
+    ./plugins/ui/telescope.nix
+    ./plugins/ui/neo-tree.nix
 
-    ./plug/utils/comment.nix
-    ./plug/utils/grapple.nix
-    ./plug/utils/illuminate.nix
-    ./plug/utils/markview.nix
-    ./plug/utils/mini.nix
-    ./plug/utils/nvim-autopairs.nix
-    ./plug/utils/oil.nix
-    ./plug/utils/ufo.nix
-    ./plug/utils/undotree.nix
-    ./plug/utils/whichkey.nix
-    ./plug/utils/intellitab.nix
+    ./plugins/utils/comment.nix
+    ./plugins/utils/grapple.nix
+    ./plugins/utils/illuminate.nix
+    ./plugins/utils/markview.nix
+    ./plugins/utils/mini.nix
+    ./plugins/utils/nvim-autopairs.nix
+    ./plugins/utils/oil.nix
+    ./plugins/utils/ufo.nix
+    ./plugins/utils/undotree.nix
+    ./plugins/utils/whichkey.nix
+    ./plugins/utils/intellitab.nix
   ];
 }

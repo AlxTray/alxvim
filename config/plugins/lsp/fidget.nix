@@ -49,6 +49,7 @@
         '';
         overrides = {
           rust_analyzer.name = "rust-analyzer";
+          nil_ls.name = "nil-ls";
         };
       };
     };

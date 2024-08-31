@@ -17,7 +17,6 @@
     };
     symbolInWinbar.enable = true;
     codeAction = {
-      extendGitSigns = true;
       showServerName = true;
       onlyInCursor = true;
       numShortcut = true;
