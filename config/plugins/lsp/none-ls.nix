@@ -7,17 +7,13 @@
       code_actions = {
         gitsigns.enable = true;
         statix.enable = true;
-        proselint.enable = true;
       };
       diagnostics = {
-        checkstyle.enable = true;
-        clazy.enable = true;
-        codespell.enable = true;
-        commitlint.enable = true;
+        gitlint.enable = true;
+        semgrep.enable = true;
         cppcheck.enable = true;
         ktlint.enable = true;
         markdownlint.enable = true;
-        proselint.enable = true;
         pylint.enable = true;
         statix.enable = true;
         stylelint.enable = true;
