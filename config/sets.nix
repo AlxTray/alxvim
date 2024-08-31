@@ -1,6 +1,8 @@
 {
   config = {
     opts = {
+      defaultEditor = true;
+
       # Enable relative line numbers
       number = true;
       relativenumber = true;
