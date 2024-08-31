@@ -1,7 +1,7 @@
 {
   plugins.bufferline = {
     enable = true;
-    separatorStyle = "thin";
+    settings.options.separator_style = "thin";
   };
   keymaps = [
     {

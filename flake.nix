@@ -2,68 +2,46 @@
   description = "Alex's Nixvim configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs =
-    { nixpkgs
+    { self
+    , nixpkgs
     , nixvim
-    , flake-parts
-    , pre-commit-hooks
+    , flake-utils
     , ...
-    }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "aarch64-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-
-      perSystem =
-        { system
-        , pkgs
-        , self'
-        , lib
-        , ...
-        }:
-        let
-          nixvim' = nixvim.legacyPackages.${system};
-          nvim = nixvim'.makeNixvimWithModule {
-            inherit pkgs;
-            module = ./config;
-          };
-        in
-        {
-          checks = {
-            pre-commit-check = pre-commit-hooks.lib.${system}.run {
-              src = ./.;
-              hooks = {
-                statix.enable = true;
-                nixfmt = {
-                  enable = true;
-                  package = pkgs.nixfmt-rfc-style;
-                };
-              };
-            };
-          };
-
-          formatter = pkgs.nixfmt-rfc-style;
-
-          packages.default = nvim;
-
-          devShells = {
-            default = with pkgs; mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
-          };
+    } @ inputs:
+    let
+      config = import ./config; # import the module directly
+    in
+    flake-utils.lib.eachDefaultSystem (system:
+    let
+      nixvimLib = nixvim.lib.${system};
+      pkgs = import nixpkgs { inherit system; };
+      nixvim' = nixvim.legacyPackages.${system};
+      nvim = nixvim'.makeNixvimWithModule {
+        inherit pkgs;
+        module = config;
+        extraSpecialArgs = {
+          inherit self;
         };
-    };
+      };
+    in
+    {
+      checks = {
+        # Run `nix flake check .` to verify that your config is not broken
+        default = nixvimLib.check.mkTestDerivationFromNvim {
+          inherit nvim;
+          name = "AlxVim";
+        };
+      };
+
+      packages = {
+        default = nvim;
+      };
+
+      formatter = pkgs.alejandra;
+    });
 }
