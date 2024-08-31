@@ -1,3 +1,6 @@
 {
-  plugins.trouble.enable = true;
+  plugins.trouble = {
+    enable = true;
+    settings.win_config.border = "rounded";
+  };
 }
